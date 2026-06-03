@@ -91,3 +91,41 @@ footer {
   padding: 15px;
   margin-top: 40px;
 }
+/* HERO - ENCABEZADO GRANDE */
+header {
+  background-image: url('img/fondo.jpeg');
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+
+.hero {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 100px 30px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 52px;
+  color: #ff6600;
+  margin: 0 0 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #ffffff;
+  margin: 0 0 30px;
+}
+
+.hero a {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.hero a:hover {
+  background-color: #cc5200;
+}
