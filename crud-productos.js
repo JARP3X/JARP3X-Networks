@@ -1,3 +1,5 @@
+// VERIFICAR ACCESO ADMIN
+verificarAdmin();
 // LISTA DE PRODUCTOS
 let productos = [];
 let contador = 1;
