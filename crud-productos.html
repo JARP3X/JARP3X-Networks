@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Productos - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- ENCABEZADO -->
+    <header>
+      <div class="hero">
+        <h1>JARP3X Networks</h1>
+        <p>Equipos y servicios de tecnología para tu negocio</p>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Gestión de Productos</h2>
+
+      <!-- FORMULARIO AGREGAR PRODUCTO -->
+      <section>
+        <h3>Agregar Producto</h3>
+        <form id="form-producto">
+
+          <label for="nombre-producto">Nombre:</label>
+          <input type="text" id="nombre-producto" placeholder="Nombre del producto">
+
+          <label for="categoria">Categoría:</label>
+          <select id="categoria">
+            <option value="Laptops">Laptops</option>
+            <option value="Periféricos">Periféricos</option>
+            <option value="Accesorios">Accesorios</option>
+            <option value="Servicios">Servicios</option>
+          </select>
+
+          <label for="precio">Precio (S/.):</label>
+          <input type="number" id="precio" placeholder="0.00">
+
+          <label for="stock">Stock:</label>
+          <input type="number" id="stock" placeholder="0">
+
+          <button type="submit">Agregar Producto</button>
+
+        </form>
+      </section>
+
+      <!-- TABLA DE PRODUCTOS -->
+      <section>
+        <h3>Lista de Productos</h3>
+        <table id="tabla-productos">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla-productos">
+            <!-- Los productos se agregan aquí con JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="crud-productos.js"></script>
+
+  </body>
+
+</html>
