@@ -191,3 +191,29 @@ td {
 tr:hover {
   background-color: #222222;
 }
+/* LOGIN */
+.login-box {
+  background-color: #222222;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  margin: 60px auto;
+  max-width: 400px;
+  padding: 40px;
+  text-align: center;
+}
+
+.login-box h2 {
+  color: #ff6600;
+  margin-bottom: 20px;
+}
+
+.login-box input {
+  display: block;
+  margin: 8px auto;
+  width: 100%;
+}
+
+.login-box button {
+  margin-top: 20px;
+  width: 100%;
+}
