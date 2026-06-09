@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Servicios - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- ENCABEZADO -->
+    <header>
+      <div class="hero">
+        <h1>JARP3X Networks</h1>
+        <p>Equipos y servicios de tecnología para tu negocio</p>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Gestión de Servicios</h2>
+
+      <!-- FORMULARIO AGREGAR SERVICIO -->
+      <section>
+        <h3>Agregar Servicio</h3>
+        <form id="form-servicio">
+
+          <label for="nombre-servicio">Nombre:</label>
+          <input type="text" id="nombre-servicio" placeholder="Nombre del servicio">
+
+          <label for="descripcion">Descripción:</label>
+          <input type="text" id="descripcion" placeholder="Descripción del servicio">
+
+          <label for="precio-servicio">Precio (S/.):</label>
+          <input type="number" id="precio-servicio" placeholder="0.00">
+
+          <label for="duracion">Tiempo estimado:</label>
+          <input type="text" id="duracion" placeholder="Ej: 1 día">
+
+          <button type="submit">Agregar Servicio</button>
+
+        </form>
+      </section>
+
+      <!-- TABLA DE SERVICIOS -->
+      <section>
+        <h3>Lista de Servicios</h3>
+        <table id="tabla-servicios">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Precio</th>
+              <th>Tiempo</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla-servicios">
+            <!-- Los servicios se agregan aquí con JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="crud-servicios.js"></script>
+
+  </body>
+
+</html>
