@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- ENCABEZADO -->
+    <header>
+      <div class="hero">
+        <h1>JARP3X Networks</h1>
+        <p>Equipos y servicios de tecnología para tu negocio</p>
+      </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="clientes.html">Clientes</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Gestión de Clientes</h2>
+
+      <!-- FORMULARIO AGREGAR CLIENTE -->
+      <section>
+        <h3>Agregar Cliente</h3>
+        <form id="form-cliente">
+
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" placeholder="Nombre completo">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" placeholder="correo@ejemplo.com">
+
+          <label for="telefono">Teléfono:</label>
+          <input type="text" id="telefono" placeholder="999 999 999">
+
+          <button type="submit">Agregar Cliente</button>
+
+        </form>
+      </section>
+
+      <!-- TABLA DE CLIENTES -->
+      <section>
+        <h3>Lista de Clientes</h3>
+        <table id="tabla-clientes">
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Teléfono</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="cuerpo-tabla">
+            <!-- Los clientes se agregan aquí con JavaScript -->
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+  </body>
+
+</html>
