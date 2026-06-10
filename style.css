@@ -247,3 +247,126 @@ tr:hover {
   margin-top: 20px;
   width: 100%;
 }
+/* HERO BOTONES */
+.hero-botones {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-primary {
+  background-color: #ff6600;
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #cc5200;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: #ffffff;
+  color: #111111;
+}
+
+/* CATEGORÍAS */
+.categorias {
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.categorias h2 {
+  color: #ff6600;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.categoria-card {
+  background-color: #222222;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.categoria-card:hover {
+  background-color: #333333;
+}
+
+.categoria-card span {
+  font-size: 40px;
+}
+
+.categoria-card h3 {
+  color: #ff6600;
+  margin: 10px 0 5px;
+}
+
+.categoria-card p {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0;
+}
+
+/* POR QUÉ ELEGIRNOS */
+.porque-nosotros {
+  background-color: #1a1a1a;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.porque-nosotros h2 {
+  color: #ff6600;
+  margin-bottom: 30px;
+  font-size: 28px;
+}
+
+.ventajas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.ventaja-card {
+  background-color: #222222;
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.ventaja-card span {
+  font-size: 36px;
+}
+
+.ventaja-card h3 {
+  color: #ff6600;
+  margin: 10px 0 5px;
+}
+
+.ventaja-card p {
+  color: #cccccc;
+  font-size: 14px;
+  margin: 0;
+}
