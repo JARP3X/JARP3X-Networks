@@ -1,5 +1,4 @@
-// VERIFICAR ACCESO ADMIN
-verificarAdmin();
+
 // LISTA DE CLIENTES
 let clientes = [];
 let contador = 1;
