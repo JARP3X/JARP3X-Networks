@@ -1,5 +1,4 @@
-// VERIFICAR ACCESO ADMIN
-verificarAdmin();
+
 // LISTA DE SERVICIOS
 let servicios = [];
 let contador = 1;
