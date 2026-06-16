@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Cliente - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- NAVEGACIÓN -->
+    <nav id="menu-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Mi Panel</h2>
+
+      <!-- TARJETAS DE RESUMEN -->
+      <section class="dashboard-cards">
+
+        <div class="dash-card">
+          <span>🛒</span>
+          <h3>3</h3>
+          <p>Mis pedidos</p>
+        </div>
+
+        <div class="dash-card">
+          <span>✅</span>
+          <h3>2</h3>
+          <p>Completados</p>
+        </div>
+
+        <div class="dash-card">
+          <span>⏳</span>
+          <h3>1</h3>
+          <p>Pendientes</p>
+        </div>
+
+        <div class="dash-card">
+          <span>💰</span>
+          <h3>S/. 1,987</h3>
+          <p>Total gastado</p>
+        </div>
+
+      </section>
+
+      <!-- MIS PEDIDOS -->
+      <section>
+        <h3>Mis Pedidos</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Fecha</th>
+              <th>Producto</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>01/06/2025</td>
+              <td>Lenovo IdeaPad 3</td>
+              <td>S/. 1,299.00</td>
+              <td>Completado</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>03/06/2025</td>
+              <td>Teclado Logitech K120</td>
+              <td>S/. 89.00</td>
+              <td>Completado</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>05/06/2025</td>
+              <td>Mouse Logitech M90</td>
+              <td>S/. 69.00</td>
+              <td>Pendiente</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ACCESOS RÁPIDOS -->
+      <section class="accesos-rapidos">
+        <h3>Accesos Rápidos</h3>
+        <div class="accesos-grid">
+          <a href="productos.html" class="btn-primary">Ver Productos</a>
+          <a href="ventas.html" class="btn-primary">Mis Ventas</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="auth.js"></script>
+
+  </body>
+
+</html>

@@ -25,9 +25,9 @@ document.getElementById("form-login").addEventListener("submit", function(e) {
 
     // Redirigir según el rol
     if (encontrado.rol === "admin") {
-      window.location.href = "crud-productos.html";
+      window.location.href = "dashboard-admin.html";
     } else {
-      window.location.href = "productos.html";
+      window.location.href = "dashboard-cliente.html";
     }
 
   } else {
