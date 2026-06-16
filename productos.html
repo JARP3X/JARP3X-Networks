@@ -46,6 +46,7 @@
             <p>Pantalla: 15.6" HD</p>
             <p>Sistema operativo: Windows 11 Home</p>
             <p>Precio: S/. 1,299.00</p>
+            <button onclick="agregarAlCarrito('Lenovo IdeaPad 3', 1299)">+ Agregar al carrito</button>
           </article>
 
           <article>
@@ -58,6 +59,7 @@
             <p>Pantalla: 15.6" Full HD</p>
             <p>Sistema operativo: Windows 11 Home</p>
             <p>Precio: S/. 2,199.00</p>
+             <button onclick="agregarAlCarrito('HP Laptop 15', 2199)">+ Agregar al carrito</button>
           </article>
 
           <article>
@@ -70,6 +72,7 @@
             <p>Pantalla: 15.6" Full HD IPS</p>
             <p>Sistema operativo: Windows 11 Home</p>
             <p>Precio: S/. 3,499.00</p>
+            <button onclick="agregarAlCarrito('ASUS VivoBook 15', 3499)">+ Agregar al carrito</button>
           </article>
         </div>
       </section>
@@ -85,22 +88,27 @@
             <p>Layout: Español</p>
             <p>Compatible con: Windows, Linux</p>
             <p>Precio: S/. 89.00</p>
+            <button onclick="agregarAlCarrito('Teclado Logitech K120', 89)">+ Agregar al carrito</button>
           </article>
 
           <article>
+            <img src="img/MouseLogitechM90.jpeg" alt="Mouse Logitech M90">
             <h4>Mouse Logitech M90</h4>
             <p>Tipo: Mouse óptico USB con cable</p>
             <p>DPI: 1000</p>
             <p>Compatible con: Windows, Mac, Linux</p>
             <p>Precio: S/. 69.00</p>
+            <button onclick="agregarAlCarrito('Mouse Logitech M90', 69)">+ Agregar al carrito</button>
           </article>
 
           <article>
+            <img src="img/MonitorLG22MP400.jpeg" alt="Monitor LG 22MP400">
             <h4>Monitor LG 22MP400</h4>
             <p>Pantalla: 21.5" Full HD IPS</p>
             <p>Resolución: 1920x1080</p>
             <p>Conexiones: HDMI, VGA</p>
             <p>Precio: S/. 599.00</p>
+            <button onclick="agregarAlCarrito('Monitor LG 22MP400', 599)">+ Agregar al carrito</button>
           </article>
         </div>
       </section>
@@ -110,27 +118,33 @@
         <h3>Accesorios</h3>
         <div>
           <article>
+            <img src="img/KingstonDataTraveler64GB.jpeg" alt="Kingston DataTraveler 64GB">
             <h4>Kingston DataTraveler 64GB</h4>
             <p>Capacidad: 64GB</p>
             <p>Conexión: USB 3.2</p>
             <p>Velocidad de lectura: 100MB/s</p>
             <p>Precio: S/. 49.00</p>
+            <button onclick="agregarAlCarrito('Kingston DataTraveler 64GB', 49)">+ Agregar al carrito</button>
           </article>
 
           <article>
+            <img src="img/SeagateBackupPlus1TB.jpeg" alt="Seagate Backup Plus 1TB">
             <h4>Seagate Backup Plus 1TB</h4>
             <p>Capacidad: 1TB</p>
             <p>Conexión: USB 3.0</p>
             <p>Compatible con: Windows, Mac</p>
             <p>Precio: S/. 249.00</p>
+            <button onclick="agregarAlCarrito('Seagate Backup Plus 1TB', 249)">+ Agregar al carrito</button>
           </article>
 
           <article>
+            <img src="img/AnkerHubUSB4Puertos.jpeg" alt="Anker Hub USB 4 puertos">
             <h4>Anker Hub USB 4 puertos</h4>
             <p>Puertos: 4x USB 3.0</p>
             <p>Cable incluido: 60cm</p>
             <p>Compatible con: Windows, Mac, Linux</p>
             <p>Precio: S/. 89.00</p>
+            <button onclick="agregarAlCarrito('Anker Hub USB 4 puertos', 89)">+ Agregar al carrito</button>
           </article>
         </div>
       </section>
@@ -175,8 +189,27 @@
       <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
     </footer>
 
-    <script src="auth.js"></script>
+    <!-- CARRITO FLOTANTE -->
+    <div id="carrito-flotante">
+      <button id="btn-carrito" onclick="toggleCarrito()">
+        🛒 <span id="contador-carrito">0</span>
+      </button>
 
+      <div id="panel-carrito">
+        <h3>Tu Carrito</h3>
+        <div id="items-carrito">
+          <p id="carrito-vacio">Tu carrito está vacío</p>
+        </div>
+        <div id="total-carrito">
+          <p>Total: <strong id="total-monto">S/. 0.00</strong></p>
+          <button class="btn-primary" onclick="irAPago()">Proceder al pago</button>
+          <button onclick="vaciarCarrito()">Vaciar carrito</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="auth.js"></script>
+    <script src="carrito.js"></script>
   </body>
 
 </html>

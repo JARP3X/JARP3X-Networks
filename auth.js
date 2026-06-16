@@ -61,8 +61,13 @@ if (paginaActual.includes("productos.html") ||
 
 if (paginaActual.includes("clientes.html") ||
     paginaActual.includes("crud-productos.html") ||
-    paginaActual.includes("crud-servicios.html")) {
+    paginaActual.includes("crud-servicios.html") ||
+    paginaActual.includes("dashboard-admin.html")) {
   verificarAdmin();
+}
+
+if (paginaActual.includes("dashboard-cliente.html")) {
+  verificarSesion();
 }
 
 // ACTUALIZAR MENÚ EN TODAS LAS PÁGINAS
