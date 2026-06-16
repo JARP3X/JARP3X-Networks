@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- NAVEGACIÓN -->
+    <nav id="menu-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Dashboard - Administrador</h2>
+
+      <!-- TARJETAS DE RESUMEN -->
+      <section class="dashboard-cards">
+
+        <div class="dash-card">
+          <span>📦</span>
+          <h3>12</h3>
+          <p>Productos</p>
+        </div>
+
+        <div class="dash-card">
+          <span>👥</span>
+          <h3>5</h3>
+          <p>Clientes</p>
+        </div>
+
+        <div class="dash-card">
+          <span>🛒</span>
+          <h3>8</h3>
+          <p>Ventas del mes</p>
+        </div>
+
+        <div class="dash-card">
+          <span>💰</span>
+          <h3>S/. 9,850</h3>
+          <p>Ingresos del mes</p>
+        </div>
+
+      </section>
+
+      <!-- VENTAS RECIENTES -->
+      <section>
+        <h3>Ventas Recientes</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>N°</th>
+              <th>Fecha</th>
+              <th>Cliente</th>
+              <th>Producto</th>
+              <th>Monto</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>001</td>
+              <td>01/06/2025</td>
+              <td>Juan Pérez</td>
+              <td>Lenovo IdeaPad 3</td>
+              <td>S/. 1,299.00</td>
+              <td>Completado</td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>02/06/2025</td>
+              <td>María López</td>
+              <td>Teclado Logitech K120</td>
+              <td>S/. 89.00</td>
+              <td>Completado</td>
+            </tr>
+            <tr>
+              <td>003</td>
+              <td>03/06/2025</td>
+              <td>Carlos Ríos</td>
+              <td>Monitor LG 22MP400</td>
+              <td>S/. 599.00</td>
+              <td>Pendiente</td>
+            </tr>
+            <tr>
+              <td>004</td>
+              <td>04/06/2025</td>
+              <td>Ana Torres</td>
+              <td>ASUS VivoBook 15</td>
+              <td>S/. 3,499.00</td>
+              <td>Completado</td>
+            </tr>
+            <tr>
+              <td>005</td>
+              <td>05/06/2025</td>
+              <td>Luis Mendoza</td>
+              <td>Servicio Mantenimiento</td>
+              <td>S/. 80.00</td>
+              <td>Completado</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- ACCESOS RÁPIDOS -->
+      <section class="accesos-rapidos">
+        <h3>Accesos Rápidos</h3>
+        <div class="accesos-grid">
+          <a href="crud-productos.html" class="btn-primary">Gestionar Productos</a>
+          <a href="crud-servicios.html" class="btn-primary">Gestionar Servicios</a>
+          <a href="clientes.html" class="btn-primary">Gestionar Clientes</a>
+          <a href="ventas.html" class="btn-primary">Ver Ventas</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="auth.js"></script>
+
+  </body>
+
+</html>

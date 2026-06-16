@@ -370,3 +370,45 @@ tr:hover {
   font-size: 14px;
   margin: 0;
 }
+/* DASHBOARD */
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.dash-card {
+  background-color: #222222;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 25px;
+  text-align: center;
+}
+
+.dash-card span {
+  font-size: 40px;
+}
+
+.dash-card h3 {
+  color: #ff6600;
+  font-size: 28px;
+  margin: 10px 0 5px;
+}
+
+.dash-card p {
+  color: #cccccc;
+  margin: 0;
+}
+
+/* ACCESOS RÁPIDOS */
+.accesos-rapidos {
+  margin-top: 40px;
+}
+
+.accesos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
