@@ -21,40 +21,38 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-      <h2>Dashboard - Administrador</h2>
+      <div class="dashboard-header">
+        <h2>👑 Panel de Administrador</h2>
+        <p id="bienvenida-admin">Bienvenido de vuelta</p>
+      </div>
 
       <!-- TARJETAS DE RESUMEN -->
       <section class="dashboard-cards">
-
         <div class="dash-card">
           <span>📦</span>
           <h3>12</h3>
           <p>Productos</p>
         </div>
-
         <div class="dash-card">
           <span>👥</span>
           <h3>5</h3>
           <p>Clientes</p>
         </div>
-
         <div class="dash-card">
           <span>🛒</span>
           <h3>8</h3>
           <p>Ventas del mes</p>
         </div>
-
-        <div class="dash-card">
+        <div class="dash-card naranja">
           <span>💰</span>
           <h3>S/. 9,850</h3>
           <p>Ingresos del mes</p>
         </div>
-
       </section>
 
       <!-- VENTAS RECIENTES -->
-      <section>
-        <h3>Ventas Recientes</h3>
+      <section class="dashboard-seccion">
+        <h3>📋 Ventas Recientes</h3>
         <table>
           <thead>
             <tr>
@@ -73,7 +71,7 @@
               <td>Juan Pérez</td>
               <td>Lenovo IdeaPad 3</td>
               <td>S/. 1,299.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>002</td>
@@ -81,7 +79,7 @@
               <td>María López</td>
               <td>Teclado Logitech K120</td>
               <td>S/. 89.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>003</td>
@@ -89,7 +87,7 @@
               <td>Carlos Ríos</td>
               <td>Monitor LG 22MP400</td>
               <td>S/. 599.00</td>
-              <td>Pendiente</td>
+              <td><span class="estado pendiente">Pendiente</span></td>
             </tr>
             <tr>
               <td>004</td>
@@ -97,7 +95,7 @@
               <td>Ana Torres</td>
               <td>ASUS VivoBook 15</td>
               <td>S/. 3,499.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>005</td>
@@ -105,20 +103,32 @@
               <td>Luis Mendoza</td>
               <td>Servicio Mantenimiento</td>
               <td>S/. 80.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <!-- ACCESOS RÁPIDOS -->
-      <section class="accesos-rapidos">
-        <h3>Accesos Rápidos</h3>
+      <section class="dashboard-seccion">
+        <h3>⚡ Accesos Rápidos</h3>
         <div class="accesos-grid">
-          <a href="crud-productos.html" class="btn-primary">Gestionar Productos</a>
-          <a href="crud-servicios.html" class="btn-primary">Gestionar Servicios</a>
-          <a href="clientes.html" class="btn-primary">Gestionar Clientes</a>
-          <a href="ventas.html" class="btn-primary">Ver Ventas</a>
+          <a href="crud-productos.html" class="acceso-card">
+            <span>📦</span>
+            <p>Gestionar Productos</p>
+          </a>
+          <a href="crud-servicios.html" class="acceso-card">
+            <span>🛠️</span>
+            <p>Gestionar Servicios</p>
+          </a>
+          <a href="clientes.html" class="acceso-card">
+            <span>👥</span>
+            <p>Gestionar Clientes</p>
+          </a>
+          <a href="ventas.html" class="acceso-card">
+            <span>📊</span>
+            <p>Ver Ventas</p>
+          </a>
         </div>
       </section>
 
@@ -130,6 +140,12 @@
     </footer>
 
     <script src="auth.js"></script>
+    <script>
+      let usuario = localStorage.getItem("usuario");
+      if (usuario) {
+        document.getElementById("bienvenida-admin").textContent = "Bienvenido, " + usuario + " 👋";
+      }
+    </script>
 
   </body>
 

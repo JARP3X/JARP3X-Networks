@@ -21,40 +21,38 @@
     <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-      <h2>Mi Panel</h2>
+      <div class="dashboard-header">
+        <h2>🛒 Mi Panel</h2>
+        <p id="bienvenida-cliente">Bienvenido de vuelta</p>
+      </div>
 
       <!-- TARJETAS DE RESUMEN -->
       <section class="dashboard-cards">
-
         <div class="dash-card">
           <span>🛒</span>
           <h3>3</h3>
           <p>Mis pedidos</p>
         </div>
-
         <div class="dash-card">
           <span>✅</span>
           <h3>2</h3>
           <p>Completados</p>
         </div>
-
         <div class="dash-card">
           <span>⏳</span>
           <h3>1</h3>
           <p>Pendientes</p>
         </div>
-
-        <div class="dash-card">
+        <div class="dash-card naranja">
           <span>💰</span>
-          <h3>S/. 1,987</h3>
+          <h3>S/. 1,457</h3>
           <p>Total gastado</p>
         </div>
-
       </section>
 
       <!-- MIS PEDIDOS -->
-      <section>
-        <h3>Mis Pedidos</h3>
+      <section class="dashboard-seccion">
+        <h3>📋 Mis Pedidos</h3>
         <table>
           <thead>
             <tr>
@@ -71,32 +69,38 @@
               <td>01/06/2025</td>
               <td>Lenovo IdeaPad 3</td>
               <td>S/. 1,299.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>002</td>
               <td>03/06/2025</td>
               <td>Teclado Logitech K120</td>
               <td>S/. 89.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>003</td>
               <td>05/06/2025</td>
               <td>Mouse Logitech M90</td>
               <td>S/. 69.00</td>
-              <td>Pendiente</td>
+              <td><span class="estado pendiente">Pendiente</span></td>
             </tr>
           </tbody>
         </table>
       </section>
 
       <!-- ACCESOS RÁPIDOS -->
-      <section class="accesos-rapidos">
-        <h3>Accesos Rápidos</h3>
+      <section class="dashboard-seccion">
+        <h3>⚡ Accesos Rápidos</h3>
         <div class="accesos-grid">
-          <a href="productos.html" class="btn-primary">Ver Productos</a>
-          <a href="ventas.html" class="btn-primary">Mis Ventas</a>
+          <a href="productos.html" class="acceso-card">
+            <span>🖥️</span>
+            <p>Ver Productos</p>
+          </a>
+          <a href="ventas.html" class="acceso-card">
+            <span>📊</span>
+            <p>Mis Ventas</p>
+          </a>
         </div>
       </section>
 
@@ -108,6 +112,12 @@
     </footer>
 
     <script src="auth.js"></script>
+    <script>
+      let usuario = localStorage.getItem("usuario");
+      if (usuario) {
+        document.getElementById("bienvenida-cliente").textContent = "Bienvenido, " + usuario + " 👋";
+      }
+    </script>
 
   </body>
 

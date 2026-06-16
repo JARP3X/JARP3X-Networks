@@ -500,3 +500,90 @@ tr:hover {
   font-size: 16px;
   margin: 0 0 10px;
 }
+/* DASHBOARD HEADER */
+.dashboard-header {
+  margin-bottom: 30px;
+  padding: 20px 0;
+  border-bottom: 2px solid #ff6600;
+}
+
+.dashboard-header h2 {
+  color: #ff6600;
+  font-size: 28px;
+  margin: 0 0 5px;
+}
+
+.dashboard-header p {
+  color: #cccccc;
+  margin: 0;
+}
+
+/* DASH CARD NARANJA */
+.dash-card.naranja {
+  background-color: #ff6600;
+  border-color: #cc5200;
+}
+
+.dash-card.naranja h3,
+.dash-card.naranja p {
+  color: #ffffff;
+}
+
+/* ESTADO EN TABLA */
+.estado {
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 4px 12px;
+}
+
+.estado.completado {
+  background-color: #1a4a1a;
+  color: #44ff44;
+}
+
+.estado.pendiente {
+  background-color: #4a3a00;
+  color: #ffaa00;
+}
+
+/* DASHBOARD SECCIÓN */
+.dashboard-seccion {
+  margin-bottom: 40px;
+}
+
+.dashboard-seccion h3 {
+  color: #ff6600;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* ACCESO CARDS */
+.accesos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.acceso-card {
+  background-color: #222222;
+  border: 1px solid #ff6600;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.acceso-card:hover {
+  background-color: #333333;
+}
+
+.acceso-card span {
+  font-size: 30px;
+}
+
+.acceso-card p {
+  color: #cccccc;
+  font-size: 13px;
+  margin: 8px 0 0;
+}
