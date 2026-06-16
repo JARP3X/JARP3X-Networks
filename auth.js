@@ -32,6 +32,7 @@ function actualizarMenu() {
   if (rol === "admin") {
     nav.innerHTML = `
       <a href="index.html">Inicio</a>
+      <a href="dashboard-admin.html">Dashboard</a>
       <a href="productos.html">Productos</a>
       <a href="ventas.html">Ventas</a>
       <a href="clientes.html">Clientes</a>
@@ -43,6 +44,7 @@ function actualizarMenu() {
   } else if (rol === "cliente") {
     nav.innerHTML = `
       <a href="index.html">Inicio</a>
+      <a href="dashboard-cliente.html">Mi Panel</a>
       <a href="productos.html">Productos</a>
       <a href="ventas.html">Ventas</a>
       <span style="color:#ff6600;">👤 ${usuario}</span>
@@ -61,13 +63,8 @@ if (paginaActual.includes("productos.html") ||
 
 if (paginaActual.includes("clientes.html") ||
     paginaActual.includes("crud-productos.html") ||
-    paginaActual.includes("crud-servicios.html") ||
-    paginaActual.includes("dashboard-admin.html")) {
+    paginaActual.includes("crud-servicios.html")) {
   verificarAdmin();
-}
-
-if (paginaActual.includes("dashboard-cliente.html")) {
-  verificarSesion();
 }
 
 // ACTUALIZAR MENÚ EN TODAS LAS PÁGINAS
