@@ -8,43 +8,37 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body>
+  <body class="pagina-login">
 
-    <!-- ENCABEZADO -->
-    <header>
-      <div class="hero">
-        <h1>JARP3X Networks</h1>
-        <p>Equipos y servicios de tecnología para tu negocio</p>
-      </div>
-    </header>
-
-    <!-- CONTENIDO PRINCIPAL -->
-    <main>
+    <div class="login-container">
 
       <div class="login-box">
+        <div class="login-logo">
+          <h1>JARP3X<span>Networks</span></h1>
+        </div>
+
         <h2>Iniciar Sesión</h2>
+        <p class="login-subtitulo">Ingresa tus datos para continuar</p>
 
         <form id="form-login">
 
-  <label for="usuario">Usuario:</label>
-  <input type="text" id="usuario" placeholder="Ingresa tu usuario">
+          <label for="usuario">Usuario</label>
+          <input type="text" id="usuario" placeholder="Ingresa tu usuario">
 
-  <label for="password">Contraseña:</label>
-  <input type="password" id="password" placeholder="Ingresa tu contraseña">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" placeholder="Ingresa tu contraseña">
 
-  <button type="submit">Ingresar</button>
+          <button type="submit" class="btn-primary">Ingresar</button>
 
-</form>
+        </form>
 
+        <p class="login-volver"><a href="index.html">← Volver al inicio</a></p>
       </div>
 
-    </main>
+    </div>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
-    </footer>
-<script src="login.js"></script>
+    <script src="login.js"></script>
+
   </body>
 
 </html>

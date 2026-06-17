@@ -10,59 +10,56 @@
 
   <body>
 
-    <!-- ENCABEZADO -->
-    <header>
-      <div class="hero">
-        <h1>JARP3X Networks</h1>
-        <p>Equipos y servicios de tecnología para tu negocio</p>
-        <a href="productos.html">Ver Productos</a>
-      </div>
-    </header>
-
     <!-- NAVEGACIÓN -->
-<nav id="menu-nav">
-  <a href="index.html">Inicio</a>
-  <a href="productos.html">Productos</a>
-  <a href="ventas.html">Ventas</a>
-  <a href="login.html">Login</a>
-</nav>
+    <nav id="menu-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="login.html">Login</a>
+    </nav>
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
 
-      <h2>Consulta de Ventas</h2>
+      <div class="dashboard-header">
+        <h2>📊 Consulta de Ventas</h2>
+        <p>Filtra tus ventas por fecha o por monto</p>
+      </div>
 
-      <!-- FILTRO POR FECHA -->
-      <section>
-        <h3>Buscar por Fecha</h3>
-        <form>
-          <label for="fecha-inicio">Fecha inicio:</label>
-          <input type="date" id="fecha-inicio" name="fecha-inicio">
+      <!-- FILTROS -->
+      <section class="filtros-ventas">
 
-          <label for="fecha-fin">Fecha fin:</label>
-          <input type="date" id="fecha-fin" name="fecha-fin">
+        <div class="filtro-box">
+          <h3>📅 Buscar por Fecha</h3>
+          <form>
+            <label for="fecha-inicio">Fecha inicio:</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio">
 
-          <button type="submit">Buscar</button>
-        </form>
-      </section>
+            <label for="fecha-fin">Fecha fin:</label>
+            <input type="date" id="fecha-fin" name="fecha-fin">
 
-      <!-- FILTRO POR MONTO -->
-      <section>
-        <h3>Buscar por Monto</h3>
-        <form>
-          <label for="monto-min">Monto mínimo:</label>
-          <input type="number" id="monto-min" name="monto-min" placeholder="S/. 0.00">
+            <button type="submit" class="btn-primary">Buscar</button>
+          </form>
+        </div>
 
-          <label for="monto-max">Monto máximo:</label>
-          <input type="number" id="monto-max" name="monto-max" placeholder="S/. 9999.00">
+        <div class="filtro-box">
+          <h3>💰 Buscar por Monto</h3>
+          <form>
+            <label for="monto-min">Monto mínimo:</label>
+            <input type="number" id="monto-min" name="monto-min" placeholder="S/. 0.00">
 
-          <button type="submit">Buscar</button>
-        </form>
+            <label for="monto-max">Monto máximo:</label>
+            <input type="number" id="monto-max" name="monto-max" placeholder="S/. 9999.00">
+
+            <button type="submit" class="btn-primary">Buscar</button>
+          </form>
+        </div>
+
       </section>
 
       <!-- TABLA DE VENTAS -->
-      <section>
-        <h3>Resultados</h3>
+      <section class="dashboard-seccion">
+        <h3>📋 Resultados</h3>
         <table>
           <thead>
             <tr>
@@ -81,7 +78,7 @@
               <td>Lenovo IdeaPad 3</td>
               <td>1</td>
               <td>S/. 1,299.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>002</td>
@@ -89,7 +86,7 @@
               <td>Teclado Logitech K120</td>
               <td>2</td>
               <td>S/. 178.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>003</td>
@@ -97,7 +94,7 @@
               <td>Monitor LG 22MP400</td>
               <td>1</td>
               <td>S/. 599.00</td>
-              <td>Pendiente</td>
+              <td><span class="estado pendiente">Pendiente</span></td>
             </tr>
             <tr>
               <td>004</td>
@@ -105,7 +102,7 @@
               <td>ASUS VivoBook 15</td>
               <td>1</td>
               <td>S/. 3,499.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
             <tr>
               <td>005</td>
@@ -113,7 +110,7 @@
               <td>Servicio Mantenimiento</td>
               <td>1</td>
               <td>S/. 80.00</td>
-              <td>Completado</td>
+              <td><span class="estado completado">Completado</span></td>
             </tr>
           </tbody>
         </table>
@@ -125,7 +122,8 @@
     <footer>
       <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
     </footer>
-<script src="auth.js"></script>
+
+    <script src="auth.js"></script>
 
   </body>
 
