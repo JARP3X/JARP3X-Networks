@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - JARP3X Networks</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- NAVEGACIÓN -->
+    <nav id="menu-nav">
+      <a href="index.html">Inicio</a>
+      <a href="productos.html">Productos</a>
+      <a href="ventas.html">Ventas</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+      <h2>Proceder al Pago</h2>
+
+      <!-- RESUMEN DEL PEDIDO -->
+      <section class="dashboard-seccion">
+        <h3>📋 Resumen del Pedido</h3>
+        <div id="resumen-pedido">
+          <p>Cargando carrito...</p>
+        </div>
+        <p>Total: <strong id="total-pago">S/. 0.00</strong></p>
+      </section>
+
+      <!-- MÉTODOS DE PAGO -->
+      <section class="dashboard-seccion">
+        <h3>💳 Elige tu método de pago</h3>
+
+        <div class="metodos-pago">
+
+          <!-- PAYPAL -->
+          <div class="metodo-card" onclick="seleccionarMetodo('paypal')">
+            <span>🅿️</span>
+            <h4>PayPal</h4>
+            <p>Paga de forma segura con tu cuenta PayPal</p>
+          </div>
+
+          <!-- YAPE -->
+          <div class="metodo-card" onclick="seleccionarMetodo('yape')">
+            <span>📱</span>
+            <h4>Yape</h4>
+            <p>Paga rápido con tu app Yape</p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PANEL PAYPAL -->
+      <section id="panel-paypal" class="panel-pago">
+        <h3>🅿️ Pago con PayPal</h3>
+        <p>Serás redirigido a PayPal para completar tu pago de forma segura.</p>
+        <div id="paypal-button-container"></div>
+      </section>
+
+      <!-- PANEL YAPE -->
+      <section id="panel-yape" class="panel-pago">
+        <h3>📱 Pago con Yape</h3>
+        <p>Escanea el código QR con tu app Yape:</p>
+        <div class="yape-qr">
+          <p>📲 Yapea al número:</p>
+          <h3>+51 999 999 999</h3>
+          <p>A nombre de: <strong>JARP3X Networks</strong></p>
+          <p>Monto: <strong id="monto-yape">S/. 0.00</strong></p>
+        </div>
+        <button class="btn-primary" onclick="confirmarYape()">
+          Ya realicé el pago
+        </button>
+      </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+      <p>© 2025 JARP3X Networks - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="auth.js"></script>
+    <script src="pago.js"></script>
+
+  </body>
+
+</html>

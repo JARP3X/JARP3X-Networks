@@ -101,5 +101,6 @@ function irAPago() {
     alert("Tu carrito está vacío");
     return;
   }
-  alert("Próximamente: Pago con PayPal y Yape");
+  localStorage.setItem("carritoGuardado", JSON.stringify(carrito));
+  window.location.href = "pago.html";
 }
