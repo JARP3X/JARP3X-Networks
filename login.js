@@ -1,36 +1,40 @@
-// USUARIOS DEL SISTEMA
-let usuarios = [
-  { usuario: "admin", password: "admin123", rol: "admin" },
-  { usuario: "cliente", password: "cliente123", rol: "cliente" }
-];
-
-// VERIFICAR LOGIN
+// USUARIOS DEL SISTEMA - ahora conectado a la base de datos
 document.getElementById("form-login").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  // Obtener los valores del formulario
   let usuario = document.getElementById("usuario").value;
   let password = document.getElementById("password").value;
 
-  // Buscar el usuario en la lista
-  let encontrado = usuarios.find(function(u) {
-    return u.usuario === usuario && u.password === password;
-  });
-
-  // Verificar si el usuario existe
-  if (encontrado) {
-    // Guardar el rol en el navegador
-    localStorage.setItem("rol", encontrado.rol);
-    localStorage.setItem("usuario", encontrado.usuario);
-
-    // Redirigir según el rol
-    if (encontrado.rol === "admin") {
-      window.location.href = "dashboard-admin.html";
-    } else {
-      window.location.href = "dashboard-cliente.html";
-    }
-
-  } else {
-    alert("Usuario o contraseña incorrectos");
+  if (usuario === "" || password === "") {
+    alert("Por favor completa todos los campos");
+    return;
   }
+
+  // Conectar con Flask
+  fetch("http://127.0.0.1:5000/login", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ email: usuario, password: password })
+  })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(data) {
+    if (data.mensaje) {
+      localStorage.setItem("rol", data.rol);
+      localStorage.setItem("usuario", data.usuario);
+
+      if (data.rol === "admin") {
+        window.location.href = "dashboard-admin.html";
+      } else {
+        window.location.href = "dashboard-cliente.html";
+      }
+    } else {
+      alert("Error: " + data.error);
+    }
+  })
+  .catch(function(error) {
+    alert("No se pudo conectar con el servidor");
+    console.error(error);
+  });
 });
