@@ -1,40 +1,54 @@
 // USUARIOS DEL SISTEMA - ahora conectado a la base de datos
-document.getElementById("form-login").addEventListener("submit", function(e) {
-  e.preventDefault();
+document
+  .getElementById("form-login")
+  .addEventListener("submit", function(e) {
+    e.preventDefault();
 
-  let usuario = document.getElementById("usuario").value;
-  let password = document.getElementById("password").value;
+  const email = document.getElementById("usuario").value.trim();
+  const password = document.getElementById("password").value;
 
-  if (usuario === "" || password === "") {
+  if (email === "" || password === "") {
     alert("Por favor completa todos los campos");
     return;
   }
 
   // Conectar con Flask
-  fetch("http://127.0.0.1:5000/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: usuario, password: password })
-  })
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data) {
-    if (data.mensaje) {
-      localStorage.setItem("rol", data.rol);
-      localStorage.setItem("usuario", data.usuario);
+  fetch("https://jarp3x-backend.onrender.com/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password
+      })
+    })
+      .then(function(response) {
+        return response.json().then(function(data) {
+          return {
+            ok: response.ok,
+            data: data
+          };
+        });
+      })
+      .then(function(resultado) {
+        const data = resultado.data;
 
-      if (data.rol === "admin") {
-        window.location.href = "dashboard-admin.html";
-      } else {
-        window.location.href = "dashboard-cliente.html";
-      }
-    } else {
-      alert("Error: " + data.error);
-    }
-  })
-  .catch(function(error) {
-    alert("No se pudo conectar con el servidor");
-    console.error(error);
+        if (resultado.ok) {
+          localStorage.setItem("rol", data.rol);
+          localStorage.setItem("usuario", data.usuario);
+
+          if (data.rol === "admin") {
+            window.location.href = "dashboard-admin.html";
+          } else {
+            window.location.href = "dashboard-cliente.html";
+          }
+        } else {
+          alert(data.error || "No se pudo iniciar sesión");
+        }
+      })
+      .catch(function(error) {
+        alert("No se pudo conectar con el servidor");
+        console.error(error);
+      });
   });
-});

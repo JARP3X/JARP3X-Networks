@@ -25,7 +25,7 @@ document.getElementById("form-registro").addEventListener("submit", function(e) 
   }
 
   // Enviar datos al servidor Flask
-  fetch("http://127.0.0.1:5000/registrar", {
+  fetch("https://jarp3x-backend.onrender.com/registrar", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ nombre, email, password })
