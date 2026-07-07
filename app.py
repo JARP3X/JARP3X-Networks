@@ -12,6 +12,13 @@ app = Flask(__name__)
 CORS(app)
 
 # ============================================
+# RUTA PRINCIPAL PARA RENDER
+# ============================================
+@app.route("/")
+def home():
+    return jsonify({"mensaje": "Backend JARP3X funcionando"}), 200
+
+# ============================================
 # CONEXION A LA BASE DE DATOS
 # ============================================
 def conectar():
@@ -33,8 +40,10 @@ def registrar():
     email = datos.get("email")
     password = datos.get("password")
 
-    # Encriptar contraseña con SHA256
     password_hash = hashlib.sha256(password.encode()).hexdigest()
+
+    db = None
+    cursor = None
 
     try:
         db = conectar()
@@ -45,13 +54,18 @@ def registrar():
         )
         db.commit()
         return jsonify({"mensaje": "Usuario registrado correctamente"}), 201
+
     except mysql.connector.errors.IntegrityError:
         return jsonify({"error": "El email ya está registrado"}), 400
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
     finally:
-        cursor.close()
-        db.close()
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
 
 # ============================================
 # RUTA: LOGIN DE USUARIO
@@ -63,6 +77,9 @@ def login():
     password = datos.get("password")
 
     password_hash = hashlib.sha256(password.encode()).hexdigest()
+
+    db = None
+    cursor = None
 
     try:
         db = conectar()
@@ -81,31 +98,42 @@ def login():
             }), 200
         else:
             return jsonify({"error": "Email o contraseña incorrectos"}), 401
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
     finally:
-        cursor.close()
-        db.close()
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
 
 # ============================================
-# RUTA: LISTAR USUARIOS (solo admin)
+# RUTA: LISTAR USUARIOS
 # ============================================
 @app.route("/usuarios", methods=["GET"])
 def listar_usuarios():
+    db = None
+    cursor = None
+
     try:
         db = conectar()
         cursor = db.cursor(dictionary=True)
         cursor.execute("SELECT id, nombre, email, rol, fecha_registro FROM usuarios")
         usuarios = cursor.fetchall()
         return jsonify(usuarios), 200
+
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
     finally:
-        cursor.close()
-        db.close()
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
 
 # ============================================
-# INICIAR SERVIDOR
+# INICIAR SERVIDOR LOCAL
 # ============================================
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
